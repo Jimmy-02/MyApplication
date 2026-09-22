@@ -16,8 +16,8 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleViewHolder> {
         void onItemClick(Article article, int position);
     }
 
-    private final List<Article> articleList;
-    private final LayoutInflater mInflater;
+    private List<Article> articleList;
+    private LayoutInflater mInflater;
     private OnItemClickListener listener;
 
     public ArticleAdapter(Context context, List<Article> list) {
@@ -45,10 +45,11 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleViewHolder> {
         holder.tvViews.setText("Views: " + article.getView());
         holder.imgCover.setImageResource(article.getImgCover());
 
+
         holder.itemView.setOnClickListener(v -> {
-            int pos = holder.getBindingAdapterPosition();
+            int pos = holder.getBindingAdapterPosition(); // vi tri dong vua duoc bam trong danh sach
             if (pos != RecyclerView.NO_POSITION && listener != null) {
-                listener.onItemClick(articleList.get(pos), pos);
+                listener.onItemClick(articleList.get(pos), pos); //articleList.get(pos) lay bai viet o vi tri pos trong danh sach
             }
         });
     }

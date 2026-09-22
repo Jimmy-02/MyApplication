@@ -27,6 +27,7 @@ public class DetailActivity extends AppCompatActivity {
             return insets;
         });
 
+        //IntentCompat la cach moi
         Article article = IntentCompat.getParcelableExtra(getIntent(), EXTRA_ARTICLE, Article.class);
         if (article == null) {
             finish();

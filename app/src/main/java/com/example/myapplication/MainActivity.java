@@ -30,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         articleList.add(new Article(
-                "Lập trình Android cho người mọi bắt đầu",
-                "Android là hệ điều hành di động phổ biến nhất hiện nay. Bài viết này giới thiệu các thành phần cơ bản như Activity, Layout, RecyclerView và cách chúng phối hợp với nhau để tạo nên một ứng dụng hoàn chỉnh.",
+                "Lập trình ăn roi cho người mọi bắt đầu",
+                "ăn roi là hệ điều hành di động phổ biến nhất hiện nay. Bài viết này giới thiệu các thành phần cơ bản như Activity, Layout, RecyclerView và cách chúng phối hợp với nhau để tạo nên một ứng dụng hoàn chỉnh.",
                 R.drawable.cover1));
         articleList.add(new Article(
-                "RecyclerView hoạt động như thế nào?",
+                "RecyclerView hoạt động như lào",
                 "RecyclerView tái sử dụng các ô đã cuộn ra khỏi màn hình để hiển thị dữ liệu mới, giúp danh sách dài vẫn mượt và tiết kiệm bộ nhớ. Adapter và ViewHolder là hai thành phần quan trọng nhất của cơ chế này.",
                 R.drawable.cover2));
         articleList.add(new Article(
@@ -55,5 +55,17 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(DetailActivity.EXTRA_ARTICLE, article);
             startActivity(intent);
         });
+
+//        adapter.setOnItemClickListener(new ArticleAdapter.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(Article article, int position) {
+//                article.increaseView();
+//                adapter.notifyItemChanged(position);
+//
+//                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+//                intent.putExtra(DetailActivity.EXTRA_ARTICLE, article);
+//                startActivity(intent);
+//            }
+//        });
     }
 }
